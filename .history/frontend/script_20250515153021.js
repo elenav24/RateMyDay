@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear the input fields after submission
         note.value = '';
+        ratingValue = 0;
         selectedRating = 0;
+        highlightStars(0);
         fillStars(0);
 
     });
@@ -61,7 +63,6 @@ stars.forEach(star => {
 
     star.addEventListener('click', () => {
         const value = parseInt(star.getAttribute('data-value'));
-        selectedRating = value;
         fillStars(value);
     });
 });
@@ -74,6 +75,7 @@ stars.forEach(star => {
 }
 
     function fillStars(value) {
+    selectedRating = value;
     if (value === 0) {
         stars.forEach(star => star.classList.remove('filled'));
         return;

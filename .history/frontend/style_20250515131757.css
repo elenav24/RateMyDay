@@ -18,7 +18,7 @@ body {
     background-color: #f4d8e6;
 }
 
-#note {
+#rating, #note {
     border: 3px solid #252271;
     border-radius: 15px;
     width: 200px;
@@ -42,22 +42,22 @@ body {
     width: 40px;
     height: 40px;
     background: none;
-    border: none;
+    border: 2px;
     cursor: pointer;
     font-size: 32px;
 }
 
 .star-btn.hover::before {
-    color: rgb(248, 174, 38);
+    color: gold;
 }
 
 .star-btn::before {
     content: '☆';
-    color: rgb(16, 16, 15);
+    color: rgb(182, 158, 24);
 }
 
 .star-btn.filled::before {
     content: '★';
-    color: rgb(243, 186, 14);
+    color: gold;
 }
 

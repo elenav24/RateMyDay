@@ -1,11 +1,11 @@
-let selectedRating = 0;
-
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('submit');
+    const rating = document.getElementById('rating');
+    const ratingValue = rating.dataset.value;
     const note = document.getElementById('note');
 
     button.addEventListener('click', async () => {
-        const ratingValue = selectedRating;
+        const ratingValue = parseInt(rating.value);
         const noteValue = note.value;
         
         if (isNaN(ratingValue) || ratingValue < 1 || ratingValue > 5) {
@@ -39,9 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Clear the input fields after submission
+        rating.value = '';
         note.value = '';
-        selectedRating = 0;
-        fillStars(0);
 
     });
 
@@ -61,7 +60,6 @@ stars.forEach(star => {
 
     star.addEventListener('click', () => {
         const value = parseInt(star.getAttribute('data-value'));
-        selectedRating = value;
         fillStars(value);
     });
 });
@@ -69,15 +67,11 @@ stars.forEach(star => {
     function highlightStars(value) {
     stars.forEach(star => {
         const starValue = parseInt(star.getAttribute('data-value'));
-        star.classList.toggle('hover', starValue <= value);
+        star.classList.toggle('hovered', starValue <= value);
     });
 }
 
     function fillStars(value) {
-    if (value === 0) {
-        stars.forEach(star => star.classList.remove('filled'));
-        return;
-    }
     stars.forEach(star => {
         const starValue = parseInt(star.getAttribute('data-value'));
         star.classList.toggle('filled', starValue <= value);

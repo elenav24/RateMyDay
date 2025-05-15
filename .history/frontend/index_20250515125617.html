@@ -9,16 +9,16 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="card">
+        <div class="container">
             <h1>Rate My Day!</h1>
                 <div class="stars">
-                    <button class="star-btn" id="star1" onclick=fillStar(1) data-value="1"></button>
-                    <button class="star-btn" id="star2" onclick=fillStar(2) data-value="2"></button>
-                    <button class="star-btn" id="star3" onclick=fillStar(3) data-value="3"></button>
-                    <button class="star-btn" id="star4" onclick=fillStar(4) data-value="4"></button>
-                    <button class="star-btn" id="star5" onclick=fillStar(5) data-value="5"></button>
+                    <button id="star1" data-value="1"></button>
+                    <button id="star2" data-value="2"></button>
+                    <button id="star3" data-value="3"></button>
+                    <button id="star4" data-value="4"></button>
+                    <button id="star5" data-value="5"></button>
                 </div>
-            <br>
+            <input type="text" id="rating" placeholder="Rate your day from 1 to 5">
             <input type="text" id="note" placeholder="Write a note about your day">
             <button id="submit">Submit</button>
         </div>

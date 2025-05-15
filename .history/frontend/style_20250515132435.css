@@ -18,7 +18,7 @@ body {
     background-color: #f4d8e6;
 }
 
-#note {
+#rating, #note {
     border: 3px solid #252271;
     border-radius: 15px;
     width: 200px;
@@ -39,25 +39,25 @@ body {
 }
 
 .star-btn {
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 32px;
+    width: 40px;  
+    aspect-ratio: 1;
+    background: #F8CA00;
+    clip-path: polygon(50% 0,
+        calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+        calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+        calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+        calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+    ); 
+  /* or more simple
+  clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+   */
 }
 
-.star-btn.hover::before {
-    color: rgb(248, 174, 38);
+.star-btn.hover {
+    color: gold;
 }
 
-.star-btn::before {
-    content: '☆';
-    color: rgb(16, 16, 15);
-}
-
-.star-btn.filled::before {
-    content: '★';
-    color: rgb(243, 186, 14);
+.star-btn.filled {
+    color: gold;
 }
 

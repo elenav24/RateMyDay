@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear the input fields after submission
         note.value = '';
+        ratingValue = 0;
         selectedRating = 0;
         fillStars(0);
 

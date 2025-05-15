@@ -18,7 +18,7 @@ body {
     background-color: #f4d8e6;
 }
 
-#note {
+#rating, #note {
     border: 3px solid #252271;
     border-radius: 15px;
     width: 200px;
