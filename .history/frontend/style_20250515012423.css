@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#rating, #note {
+    border: 3px solid #cb4df2;
+    border-radius: 15px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#submit {
+    background-color: #252271;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
